@@ -56,10 +56,10 @@ async function loadMoreImages() {
     const { images } = await getImagesByQuery(query, currentPage);
     createGallery(images);
 
-    // ✅ Отримуємо висоту першої картки
+
     const cardHeight = document.querySelector('.gallery-item').getBoundingClientRect().height;
 
-    // ✅ Прокручуємо вниз на дві висоти картки
+    
     window.scrollBy({
       top: cardHeight * 2,
       behavior: 'smooth'
